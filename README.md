@@ -14,3 +14,7 @@ This application is the E-Booking store is dedcicated to
 
 You can now view bookstore-frontend in the browser:
 Local:     http://localhost:3000
+
+The structure of the project is base componenet:
+Each componenet is dedicated to one function --> to make the architecture more clean and reusable and then facilite the maintenance
+![image](https://github.com/user-attachments/assets/2d27c038-cdc2-4021-8abe-617ca02fdeed)
