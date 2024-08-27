@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+This application is for E-Booking store is dedcicated 
+
+Frontend (React):
+1.   Create a React application for an online bookstore.
+2.   Display a list of books with their titles, authors, and prices.
+3.   Implement a shopping cart feature that allows users to add books to their cart.
+4.   Display the contents of the shopping cart with the ability to modify quantities and remove items.
+5.   Implement a simple checkout process that shows a summary of the order.
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -12,7 +25,7 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You may also see any lint errors in _the_ console.
 
 ### `npm test`
 
