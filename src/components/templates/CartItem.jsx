@@ -1,7 +1,7 @@
 import {TrashSolidIcon} from "../items/Icons";
 import React, {useEffect, useState} from "react";
 
-const CartItem = ({item: {id, title, author, price, quantity},useCart}) => {
+const CartItem = ({item: {id, title, author, price, quantity}, useCart}) => {
     const {dispatch} = useCart();
 
     const removeFromCart = (e) => {
@@ -9,8 +9,8 @@ const CartItem = ({item: {id, title, author, price, quantity},useCart}) => {
         dispatch({type: "remove", payload: {id}});
     };
 
-    const changeQuantity= (e) => {
-        dispatch({type: "changeQuantity", payload: {id, title, author, price}, newQuantity:e.target.value});
+    const changeQuantity = (e) => {
+        dispatch({type: "changeQuantity", payload: {id, title, author, price}, newQuantity: e.target.value});
     };
     return (
         <div className="flex items-center">
@@ -21,7 +21,9 @@ const CartItem = ({item: {id, title, author, price, quantity},useCart}) => {
                 <div className="text-base text-gray-800 sm:text-sm">{title}</div>
                 <div>
                     <div className="text-sm text-gray-600 sm:text-xs">
-                        Quantity: <input type="number"  value={quantity} onChange={e => changeQuantity(e)}   />
+                        Quantity: <input type="number" value={quantity} min="1"
+                                         alt="Change the quantity"
+                                         style={{backgroundColor: 'rgba(216,206,206,0.75)'}} onChange={e => changeQuantity(e)}/>
                     </div>
                     <div className="text-sm font-semibold text-green-700 sm:text-xs">
                         € {quantity * price}
@@ -32,7 +34,7 @@ const CartItem = ({item: {id, title, author, price, quantity},useCart}) => {
             <div>
                 <a
                     href="/public"
-                    className="text-gray-600 hover:text-gray-800"
+                    className="text-red-600 hover:text-gray-800"
                     onClick={removeFromCart}
                 >
                     {<TrashSolidIcon className="w-5 h-5"/>}

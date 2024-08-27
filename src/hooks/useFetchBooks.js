@@ -84,7 +84,7 @@ const useFetchBooks = () => {
 
         axios.get(url)
             .then(({data}) => {
-                console.log("okaaaay",data);
+                console.log("My book list is",data);
                 setData(data);
             })
             .catch((err) => setError(err))

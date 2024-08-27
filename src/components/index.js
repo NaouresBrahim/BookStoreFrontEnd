@@ -1,6 +1,4 @@
 export {
-    DownloadOutlineIcon,
-    UploadOutlineIcon,
     HeartOutlineIcon,
     HeartSolidIcon,
     ShoppingCartSolidIcon,
