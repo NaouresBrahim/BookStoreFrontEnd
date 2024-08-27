@@ -17,7 +17,7 @@ const AppLayout = ({children}) => {
 const Page = ({title, children}) => {
     return (
         <main className="w-full p-6">
-            <h2 className="mb-4 text-2xl font-semibold text-gray-700">{title}</h2>
+            <h2 className="mb-4 text-2xl font-semibold text-green-700">{title}</h2>
             {children}
         </main>
     );

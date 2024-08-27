@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import  axios from "axios";
 
 const useFetchBooks = () => {
     const books = [
@@ -72,29 +73,26 @@ const useFetchBooks = () => {
 
         }
     ]
-    const url = `https://fakestoreapi.com/Books?description_like`
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
 
+    const url = 'http://localhost:8083/api/book/getAll';
     useEffect(() => {
         setLoading(false);
         setError(false);
 
-        fetch(url)
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
+        axios.get(url)
+            .then(({data}) => {
+                console.log("okaaaay",data);
+                setData(data);
             })
-            .then((result) => setData(result))
             .catch((err) => setError(err))
             .finally(() => setLoading(false));
     }, [url]);
 
     return {
-        data: books,
+        data:books,
         loading ,
         error:false
     };
