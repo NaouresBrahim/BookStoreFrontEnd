@@ -1,8 +1,6 @@
-# Getting Started with Create React App
+# online Book store FrontEnd
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-This application is the online Booking store created with Reactjs 18.3 and it is : 
+This application is the online Book store created with Reactjs 18.3 and it is : 
 
 1.   Display a list of books with their titles, authors, and prices.
 2.   Implement a shopping cart feature that allows users to add books to their cart.
