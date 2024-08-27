@@ -9,8 +9,8 @@ This application is the online Booking store created with Reactjs 18.3 and it is
 3.   Display the contents of the shopping cart with the ability to modify quantities and remove items.
 ![image](https://github.com/user-attachments/assets/f9bb7942-15fa-4e5c-ac62-b44215868866)
 
-
-You can now view bookstore-frontend in the browser:
+After put: npm start 
+You can  view bookstore-frontend in the browser:
 Local:     http://localhost:3000
 
 The structure of the project is based componenet:
