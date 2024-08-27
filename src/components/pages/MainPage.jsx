@@ -50,7 +50,7 @@ const itemsReducer = (
     }
 };
 
-function Home() {
+function MainPage() {
     const [isOpen, setIsOpen] = useState(false);
     const [items, dispatch] = useReducer(itemsReducer, []);
 
@@ -68,4 +68,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default MainPage;
