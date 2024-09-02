@@ -77,7 +77,7 @@ const useFetchBooks = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
 
-    const url = 'http://localhost:8083/api/book/getAll';
+    const url = 'http://localhost:8083/public/api/book/getAll';
     useEffect(() => {
         setLoading(false);
         setError(false);
@@ -92,7 +92,7 @@ const useFetchBooks = () => {
     }, [url]);
 
     return {
-        data:books,
+        data,
         loading ,
         error:false
     };

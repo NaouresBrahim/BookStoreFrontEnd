@@ -3,6 +3,7 @@ import {AppLayout, Footer, Page} from "../items/Layouts";
 import BookList from "../templates/BookList";
 import Header from "../templates/Header";
 import ModalCard from "../templates/ModalCard";
+import CheckOutPage from "./chekoutPage";
 
 const CartContext = createContext();
 
@@ -52,15 +53,17 @@ const itemsReducer = (
 
 function MainPage() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isCheckout, setIsCheckout] = useState(false);
     const [items, dispatch] = useReducer(itemsReducer, []);
 
     return (
-        <CartContext.Provider value={{setIsOpen, items, dispatch}}>
+        <CartContext.Provider value={{setIsOpen,setIsCheckout, items, dispatch}}>
             <AppLayout>
                 <Header  useCart={useCart}/>
                 {isOpen && <ModalCard CartContext={CartContext} useCart={useCart}/>}
                 <Page title="Top Selling Books – 2024">
-                    <BookList context={useCart}/>
+                    {!isCheckout &&<BookList context={useCart}/>}
+                    {isCheckout && <CheckOutPage CartContext={CartContext} useCart={useCart}/>}
                 </Page>
                 <Footer/>
             </AppLayout>
